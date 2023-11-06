@@ -193,6 +193,7 @@ const EnergyCalculator = ({ energyData }) => {
 ```
 
 ### Commit Message Guidelines
+- Keep commits as small as possible, trying to keep each one focused on one particular feature
 - Begin the commit message with a verb in the imperative mood.
 - Keep the first line under 50 characters.
 - Include a more detailed description if necessary, after a blank line.
