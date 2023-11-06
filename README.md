@@ -2,6 +2,8 @@
 
 This is the code behind our 2024 TSA Webmaster submission. Our current team members are: Ryan, Kari, and Elisa
 
+
+
 # Quick Start (start coding with us!)
 
 ### Setting Up the Development Environment
@@ -73,25 +75,49 @@ This is the code behind our 2024 TSA Webmaster submission. Our current team memb
 ### Previewing Changes Locally
 
 **9. Previewing the Website:**
-   - You can preview the static website directly in VS Code using the "Live Server" extension:
-     - Go to the Extensions view in VS Code (View > Extensions).
-     - Search for "Live Server" and install it.
-     - Once installed, open the HTML file you want to preview.
-     - Right-click on the file and select "Open with Live Server."
+To get started with React and npm, you’ll need to install Node.js, which includes npm (Node Package Manager). Here’s a brief tutorial on installing Node.js and npm, initializing a React project, and using npm to install required packages.
 
-**10. Using GitHub Pages for Development:**
-   - For real-time deployment previews, setting up a development branch in GitHub Pages can be helpful.
-   - Every push to this branch can be set to automatically build and publish the website, allowing the team to see changes in a live environment.
+#### Step 1: Installing Node.js and npm
+
+1. **Download Node.js**: Visit the official Node.js website at [nodejs.org](https://nodejs.org/) and download the latest stable version for your operating system.
+
+2. **Install Node.js**: Run the downloaded installer, following the prompts to install both Node.js and npm. The installer should set up everything, including adding Node.js and npm to your system's PATH.
+
+3. **Verify Installation**: To check if Node.js and npm are installed correctly, open a terminal or command prompt and run:
+   ```sh
+   node --version
+   npm --version
+   ```
+   You should see the version numbers for both Node.js and npm if they are correctly installed.
+
+#### Step 2: Running React Locally
+
+2. **Navigate to Your Project**: Once the installation is complete, move into your project directory (Open VSCode, open your cloned repo, go to Terminal > New Terminal):
+   ```sh
+   cd webmaster-2024
+   ```
+
+3. **Installing packages**: Run the following to install the dependencies required to get the app working locally
+   ```sh
+   npm install
+   ```
+
+3. **Start the Development Server**: You can start the local development server to see your React app in action:
+   ```sh
+   npm start
+   ```
+   This command will open your default web browser and load the React app at `http://localhost:3000`.
 
 ### Additional Tips
 
-- Encourage the team members to frequently pull the latest changes from the main branch to stay updated:
+- Frequently pull the latest changes from the main branch to stay updated:
   ```
   git pull origin main
   ```
-- Recommend using branch strategies, like feature branches for new features or bugfix branches for fixes, to keep the work organized.
 
 *If you have further questions, please contact Ryan for help*
+
+
 
 # Code Styling Guidelines:
 
