@@ -84,7 +84,7 @@ To get started with React and npm, you’ll need to install Node.js, which inclu
 2. **Install Node.js**: Run the downloaded installer, following the prompts to install both Node.js and npm. The installer should set up everything, including adding Node.js and npm to your system's PATH.
 
 3. **Verify Installation**: To check if Node.js and npm are installed correctly, open a terminal or command prompt and run:
-   ```sh
+   ```
    node --version
    npm --version
    ```
@@ -93,17 +93,17 @@ To get started with React and npm, you’ll need to install Node.js, which inclu
 #### Step 2: Running React Locally
 
 2. **Navigate to Your Project**: Once the installation is complete, move into your project directory (Open VSCode, open your cloned repo, go to Terminal > New Terminal):
-   ```sh
+   ```
    cd webmaster-2024
    ```
 
 3. **Installing packages**: Run the following to install the dependencies required to get the app working locally
-   ```sh
+   ```
    npm install
    ```
 
 3. **Start the Development Server**: You can start the local development server to see your React app in action:
-   ```sh
+   ```
    npm start
    ```
    This command will open your default web browser and load the React app at `http://localhost:3000`.
