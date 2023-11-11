@@ -38,6 +38,10 @@ function AppContent() {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+    if (isAnimating) {
+      return;
+    }
+
     if (location.pathname !== currentPath) {
       setIsAnimating(true);
       setPrevPath(currentPath); // Save the previous path
@@ -53,7 +57,7 @@ function AppContent() {
         setIsAnimating(false);
       }, 2000); // full duration
     }
-  }, [location, currentPath]);
+  }, [location, currentPath, isAnimating]);
 
   const renderComponentForPath = (path) => {
     switch (path) {
