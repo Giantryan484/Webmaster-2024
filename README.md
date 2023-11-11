@@ -1,6 +1,6 @@
 # Webmaster-2024
 
-This is the code behind our 2024 TSA Webmaster submission. Our current team members are: Ryan, Kari, and Elisa
+This is the code behind our 2024 TSA Webmaster submission. 
 
 See [Quick Start Guide](Quick%20Start.md) for info on how to get started and setup your coding environment
 
