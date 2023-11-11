@@ -1,14 +1,16 @@
-.canvas {
-  width: 100vw;
-  height: 80vh;
+.frontpage-canvas {
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust 60px to your actual header height */
+  position: relative; /* If needed, depending on your layout */
+  overflow: auto; /* In case the content inside canvas is bigger than the canvas itself */
 }
 
-header {
+/* header {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-}
+} */
 
 .clip-button {
   position: absolute;

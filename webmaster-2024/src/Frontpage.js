@@ -75,10 +75,7 @@ const Frontpage = () => {
 
   return (
     <div className="page-content">
-        <header>
-            EcoChoices
-        </header>
-        <div className="canvas">
+        <div className="frontpage-canvas">
             <button
                 className="clip-button"
                 id="button1"

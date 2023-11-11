@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 5px solid transparent; /* Add a border */
+    border-image: linear-gradient(to right, #53AE13, #53AE13, white) 1; /* Linear gradient for the border */
+}
+
+/* .header-left {
+    Adjust as per your logo size and preference
+} */
+
+.logo-button, .nav-button {
+    background: none;
+    border: 2px solid gray; /* Add border for circular ends */
+    border-radius: 20px; /* Circular ends */
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for smooth effect */
+}
+
+.logo-button:hover, .nav-button:hover {
+    background-color: lightgray; /* Color change on hover */
+    transform: scale(1.05); /* Pop-out effect */
+}
+
+.logo-button:active, .nav-button:active {
+    transform: scale(1); /* Shrink back to original size */
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%; /* Adjust the width as needed */
+}
