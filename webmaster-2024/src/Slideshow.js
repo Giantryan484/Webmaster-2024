@@ -15,8 +15,7 @@ const slides = [
 ];
   
 
-function Slideshow() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+function Slideshow({currentSlide, setCurrentSlide}) {
     const [slideDirection, setSlideDirection] = useState('forward');
 
     const goBack = () => {

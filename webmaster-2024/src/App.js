@@ -37,6 +37,8 @@ function AppContent() {
   const [prevPath, setPrevPath] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
     if (isAnimating) {
       return;
@@ -64,7 +66,7 @@ function AppContent() {
       case '/':
         return <Frontpage />;
       case '/slideshow':
-        return <SlideShow />;
+        return <SlideShow currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}/>;
       default:
         return <Frontpage />; // Default case
     }
