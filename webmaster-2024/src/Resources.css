@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #2e2e2e;
+    margin-bottom: 0.5em;
+  }
+  
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.75em; }
+  h4 { font-size: 1.5em; }
+  h5 { font-size: 1.25em; }
+  h6 { font-size: 1em; }
+  
+  p {
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+  
+  /* a {
+    color: #53AE13;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #469210;
+  } */
+  
+  img {
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  
+  ul, ol {
+    color: #4a4a4a;
+  }
+  
+  ul {
+    list-style-type: square;
+  }
+  
+  /* button {
+    background-color: #53AE13;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  /* button:hover {
+    background-color: #469210;
+  }   */
+
+  .resources-background {
+    position: absolute;
+    top: 68px;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    padding: 40px 0px;
+    background-color: #f5f5f5;
+
+  }
+
+  .resources-content {
+    border-radius: 30px;
+    background-color: white;
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 20px;
+    border: 2px solid lightgray
+  }

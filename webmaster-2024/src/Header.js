@@ -25,8 +25,8 @@ const Header = () => {
             <Link to="/" className="nav-button">Home</Link>
             {/* <Link to="/info" className="nav-button">Info</Link> */}
             <Link to="/slideshow" className="nav-button">SlideShow</Link>
-            {/* <Link to="/explorer" className="nav-button">Explorer</Link>
-            <Link to="/resources" className="nav-button">Resources</Link> */}
+            {/* <Link to="/explorer" className="nav-button">Explorer</Link> */}
+            <Link to="/resources" className="nav-button">Resources</Link>
         </div>
     </div>
     );
