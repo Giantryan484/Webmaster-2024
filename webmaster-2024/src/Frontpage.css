@@ -1,6 +1,6 @@
 .frontpage-canvas {
   width: 100%;
-  height: calc(100vh - 60px); /* Adjust 60px to your actual header height */
+  height: calc(100vh - 68px); /* Adjust 60px to your actual header height */
   position: relative; /* If needed, depending on your layout */
   overflow: auto; /* In case the content inside canvas is bigger than the canvas itself */
 }
