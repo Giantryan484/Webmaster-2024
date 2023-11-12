@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Frontpage.css';
 
 const Frontpage = () => {
@@ -76,7 +77,8 @@ const Frontpage = () => {
   return (
     <div className="page-content">
         <div className="frontpage-canvas">
-            <button
+            <Link
+                to='/'
                 className="clip-button"
                 id="button1"
                 onClick={() => handleClick(1)}
@@ -96,9 +98,10 @@ const Frontpage = () => {
                     }}>
                     LOGO
                 </div>
-            </button>
+            </Link>
 
-            <button
+            <Link
+                to='/slideshow'
                 className="clip-button"
                 id="button2"
                 onClick={() => handleClick(2)}
@@ -116,11 +119,12 @@ const Frontpage = () => {
                         bottom: `${offsets.vertical}%`,
                         left: `${offsets.horizontal}%`,
                     }}>
-                    CARBON FOOTPRINT CALCULATOR
+                    SLIDESHOW
                 </div>
-            </button>
+            </Link>
 
-            <button
+            <Link
+                to='/how-to-make-big-change'
                 className="clip-button"
                 id="button3"
                 onClick={() => handleClick(3)}
@@ -140,9 +144,10 @@ const Frontpage = () => {
                     }}>
                     HOW TO MAKE BIG CHANGE WITH LITTLE EFFORT
                 </div>
-            </button>
+            </Link>
 
-            <button
+            <Link
+                to='/resources'
                 className="clip-button"
                 id="button4"
                 onClick={() => handleClick(4)}
@@ -162,9 +167,10 @@ const Frontpage = () => {
                     }}>
                     RESOURCES
                 </div>
-            </button>
+            </Link>
 
-            <button
+            <Link
+                to='/home-explorer'
                 className="clip-button"
                 id="button5"
                 onClick={() => handleClick(5)}
@@ -186,7 +192,7 @@ const Frontpage = () => {
                     }}>
                     HOME EXPLORER
                 </div>
-            </button>
+            </Link>
         </div>
     </div>
   );
