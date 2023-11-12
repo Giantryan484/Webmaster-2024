@@ -31,6 +31,7 @@ import Header from './Header';
 import SlideShow from './Slideshow';
 import TransitionAnimation from './TransitionAnimation';
 import Resources from './Resources';
+import Explorer from './Explorer';
 
 function AppContent() {
   const location = useLocation();
@@ -70,6 +71,8 @@ function AppContent() {
         return <SlideShow currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}/>;
       case '/resources':
         return <Resources />;
+      case '/explorer':
+        return <Explorer />;
       default:
         return <Frontpage />; // Default case
     }
