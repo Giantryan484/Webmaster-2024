@@ -60,8 +60,8 @@ h1 {
 
 .rectangle {
   position: absolute;
-  width: 30%;
-  height: 35%;
+  width: 30vw;
+  height: 20vw;
   background-color: white;
   border: 2px solid lightgray;
   border-radius: 30px;
@@ -75,18 +75,18 @@ h1 {
 }
 
 .top-left {
-  top: 85%; /* Adjust these percentages as needed */
-  left: 7%;
+  top: 41vw; /* Adjust these percentages as needed */
+  left: 3vw;
 }
 
 .middle-right {
-  top: 158%;
-  right: 5%;
+  top: 80vw;
+  right: 3vw;
   transform: translateY(-50%); /* To center it vertically */
 }
 
 .bottom-left {
-  bottom: -130%;
-  left: 7%;
+  top: 94vw;
+  left: 3vw;
 }
 

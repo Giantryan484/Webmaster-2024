@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Explorer.css';
 
 const Explorer = () => {
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(2);
   const images = [
     `${process.env.PUBLIC_URL}/House3.png`,
     `${process.env.PUBLIC_URL}/House2.png`,
