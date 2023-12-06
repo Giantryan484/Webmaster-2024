@@ -40,6 +40,7 @@
   justify-content: center;
   margin: 1.5vw 0.6vw; /* More space and center horizontally */
   cursor: pointer;
+  transition: 0.2s all
 }
 
 .radio-button.selected {
