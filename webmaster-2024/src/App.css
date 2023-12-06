@@ -1,0 +1,50 @@
+html, body {
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.scroll-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto; /* Allow scrolling */
+}
+
+.svg-container {
+  width: 100%; /* Ensure container takes full width */
+  height: 100vh; /* Adjust height as needed */
+  overflow: auto; /* Allows scrolling if SVG is taller than viewport */
+}
+
+.svg-container img {
+  width: 100%; /* Scale image to fill container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove default inline spacing */
+}
+
+.rectangle {
+  position: absolute;
+  width: 100px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  background-color: blue; /* Example color */
+  z-index: 10; /* Ensure it's above the image */
+}
+
+#rectangle1 {
+  top: 10%; /* Adjust for your needs */
+  left: 20%; /* Adjust for your needs */
+}
+
+#rectangle2 {
+  top: 30%; /* Adjust for your needs */
+  left: 40%; /* Adjust for your needs */
+}
+
+#rectangle3 {
+  top: 50%; /* Adjust for your needs */
+  left: 60%; /* Adjust for your needs */
+}
