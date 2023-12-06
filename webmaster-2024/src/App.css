@@ -5,46 +5,80 @@ html, body {
   height: 100%;
 }
 
-.scroll-container {
+.svg-background-container {
+  /* Full width, automatic height based on content */
+  width: 100%;
+  min-height: 100vh; /* At least full viewport height, can grow as needed */
+  /* Set SVG as background image */
+  background-size: 100% auto; /* Full width, auto height to maintain aspect ratio */
+  background-repeat: repeat-y; /* Repeat vertically if needed */
+  background-attachment: scroll; /* Scroll with the page */
+}
+
+.content {
+  /* Style your content here */
+  color: white; /* Example: white text for visibility */
+  padding: 20px;
+  /* Additional styling */
+}
+
+h1 {
+  margin-top: 202%;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto; /* Allow scrolling */
+  background: transparent;
 }
 
-.svg-container {
-  width: 100%; /* Ensure container takes full width */
-  height: 100vh; /* Adjust height as needed */
-  overflow: auto; /* Allows scrolling if SVG is taller than viewport */
+.button-group {
+  display: flex;
 }
 
-.svg-container img {
-  width: 100%; /* Scale image to fill container width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove default inline spacing */
+.header-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+  margin: 10px 55px;
+  cursor: pointer;
+  padding: 5px 10px;
 }
+
+.header-button:hover {
+  color: lightgreen;
+}
+
 
 .rectangle {
   position: absolute;
-  width: 100px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
-  background-color: blue; /* Example color */
-  z-index: 10; /* Ensure it's above the image */
+  width: 30%;
+  height: 35%;
+  background-color: white;
+  border: 2px solid lightgray;
+  border-radius: 20px;
 }
 
-#rectangle1 {
-  top: 10%; /* Adjust for your needs */
-  left: 20%; /* Adjust for your needs */
+.top-left {
+  top: 85%; /* Adjust these percentages as needed */
+  left: 7%;
 }
 
-#rectangle2 {
-  top: 30%; /* Adjust for your needs */
-  left: 40%; /* Adjust for your needs */
+.middle-right {
+  top: 155%;
+  right: 5%;
+  transform: translateY(-50%); /* To center it vertically */
 }
 
-#rectangle3 {
-  top: 50%; /* Adjust for your needs */
-  left: 60%; /* Adjust for your needs */
+.bottom-left {
+  bottom: -126%;
+  left: 7%;
 }
+

@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .tree-container {
+    background-image: url('/Users/ryanmccormick/Downloads/Code/Webmaster-2024/webmaster-2024/public/tree.svg'); /* Update the path to your SVG */
+    
+    position: relative;
+    width: 100%;
+    /* Do not set the height here to allow the SVG to determine the container's height */
+    background-size: contain; /* Use 'contain' to ensure the full SVG is visible */
+    background-repeat: no-repeat; /* Prevent the SVG from repeating */
+    background-position: top center; /* Align the SVG to the top */
+  }
+  
+  .activity, .resource {
+    position: absolute;
+    background-color: #fff; /* This is just a placeholder, you'll have transparent backgrounds */
+    border: 2px solid black; /* Just to visualize the areas */
+    transition: background-color 0.3s;
+  }
+  
+  .activity:hover, .resource:hover {
+    background-color: rgba(255,255,255,0.5); /* Change color on hover */
+  }
+  
+  /* Position your activities according to your design */
+  #activity-1 {
+    top: 100px;
+    left: 50px;
+    width: 200px;
+    height: 100px;
+  }
+  
+  #activity-2 {
+    top: 250px;
+    left: 150px;
+    width: 200px;
+    height: 100px;
+  }
+  
+  #activity-3 {
+    top: 400px;
+    left: 250px;
+    width: 200px;
+    height: 100px;
+  }
+  
+  #resource {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+  }
+  

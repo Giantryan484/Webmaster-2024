@@ -1,24 +1,34 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import './App.css';
+import Flashcard from './FlashcardTemp';
+import Slideshow from './SlideshowTemp';
+import Explorer from './HomeExplorerTemp';
 
 function App() {
-  const handleScroll = useCallback((e) => {
-    const scrollY = e.target.scrollTop;
-
-    // Adjust these values based on how you want the rectangles to move
-    document.getElementById('rectangle1').style.top = (10 + scrollY * 0.1) + '%';
-    document.getElementById('rectangle2').style.top = (30 + scrollY * 0.1) + '%';
-    document.getElementById('rectangle3').style.top = (50 + scrollY * 0.1) + '%';
-  }, []);
-
   return (
-    <div className="scroll-container">
-      <div className="svg-container">
-        <img src={`${process.env.PUBLIC_URL}/tree.svg`} alt="tree background" />
-      </div>
-      <div className="rectangle" id="rectangle1"></div>
-      <div className="rectangle" id="rectangle2"></div>
-      <div className="rectangle" id="rectangle3"></div>
+    <div className="svg-background-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/tree.svg)` }}>
+      <header className="header-bar">
+            <div className="button-group left">
+                <button className="header-button">Flashcards</button>
+                <button className="header-button">Home Explorer</button>
+            </div>
+            <div className="button-group right">
+                <button className="header-button">Slideshow</button>
+                <button className="header-button">Resources</button>
+            </div>
+        </header>
+        <div className="rectangle top-left">
+          <Flashcard />
+        </div>
+        <div className="rectangle middle-right">
+          <Explorer />
+        </div>
+        <div className="rectangle bottom-left">
+          <Slideshow />
+        </div>
+        <div className="content">
+            <h1></h1>
+        </div>
     </div>
   );
 }
