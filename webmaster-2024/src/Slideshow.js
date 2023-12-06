@@ -51,7 +51,7 @@ function Slideshow({ currentSlide, setCurrentSlide }) {
     <div className='slideshow-page'>
       <div className="slideshow-container">
         {currentSlide > 0 && <button className="arrow-button go-back" onClick={goBack}>←</button>}
-        <div className='slide slide-main' style={slides[currentSlide]}> Sup baby</div>
+        <div className='slide' style={slides[currentSlide]}></div>
         {animating && <div className={`slide ${slideDirection === 'forward' ? 'sliding-off' : 'sliding-on'}`}
              style={slides[animatedSlide]}></div>
         }

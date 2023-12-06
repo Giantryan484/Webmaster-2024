@@ -25,7 +25,12 @@ function App() {
           <Explorer />
         </div>
         <div className="rectangle bottom-left">
-          <Slideshow />
+          {/* <Slideshow /> */}
+          <iframe 
+                src={`${process.env.PUBLIC_URL}/Webmaster sketches 12-4-23.pdf`}
+                title="PDF"
+                className="pdf-viewer"
+          ></iframe>
         </div>
         <div className="content">
             <h1></h1>
