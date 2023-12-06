@@ -11,7 +11,7 @@ const Explorer = () => {
 
   return (
     <div className="image-switcher-container">
-      <div className="image-container">
+      <div className="home-container">
         <img src={images[selectedImage]} alt={`Display ${selectedImage}`} />
       </div>
       <div className="radio-buttons-container">
