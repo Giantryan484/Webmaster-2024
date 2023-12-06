@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Flashcard from './FlashcardTemp';
-import Slideshow from './SlideshowTemp';
-import Explorer from './HomeExplorerTemp';
+import Flashcard from './Slideshow';
+import Slideshow from './Presentation';
+import Explorer from './Explorer';
 
 function App() {
+  const [slide, setSlide] = useState(0);
   return (
     <div className="svg-background-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/tree.svg)` }}>
       <header className="header-bar">
@@ -18,7 +19,7 @@ function App() {
             </div>
         </header>
         <div className="rectangle top-left">
-          <Flashcard />
+          <Flashcard currentSlide={slide} setCurrentSlide={setSlide}/>
         </div>
         <div className="rectangle middle-right">
           <Explorer />
