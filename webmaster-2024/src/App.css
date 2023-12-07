@@ -93,3 +93,56 @@ h1 {
   left: 3vw;
 }
 
+.resources-button {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 255, 0.338);
+}
+
+.resources-button:hover {
+  cursor: pointer;
+}
+
+.CC {
+  top: 172vw;
+  left: 12vw;
+  width: 16vw;
+  height: 8vw;
+}
+
+.POWL {
+  top: 185vw;
+  left: 6vw;
+  width: 14vw;
+  height: 9vw;
+}
+
+.BKGN {
+  top: 186vw;
+  left: 34vw;
+  width: 15vw;
+  height: 7vw;
+}
+
+.CODE {
+  top: 173vw;
+  left: 43vw;
+  width: 14vw;
+  height: 7vw;
+}
+
+.IMGS {
+  top: 187vw;
+  left: 81vw;
+  width: 18vw;
+  height: 10vw;
+}
+
+.LINKS {
+  top: 188vw;
+  left: 57vw;
+  width: 14vw;
+  height: 8vw;
+}
+
+

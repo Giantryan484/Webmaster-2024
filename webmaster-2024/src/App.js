@@ -64,6 +64,12 @@ function App() {
                   className="pdf-viewer"
             ></iframe>
         </div>
+        <a className='resources-button CC' href='' target="_blank" rel="noopener noreferrer"></a>
+        <a className='resources-button POWL' hreaf='' target="_blank" rel="noopener noreferrer"></a>
+        <a className='resources-button IMGS' href='' target="_blank" rel="noopener noreferrer"></a>
+        <a className='resources-button LINKS' href='' target="_blank" rel="noopener noreferrer"></a>
+        <a className='resources-button CODE' href='https://github.com/Giantryan484/Webmaster-2024' target="_blank" rel="noopener noreferrer"></a>
+        <a className='resources-button BKGN' href='' target="_blank" rel="noopener noreferrer"></a>
         <div className="content">
           <h1></h1>
         </div>
