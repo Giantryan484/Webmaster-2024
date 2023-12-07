@@ -1,61 +1,108 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import './App.css';
 import Flashcard from './Slideshow';
-import Slideshow from './Presentation';
+// import Slideshow from './Presentation';
 import Explorer from './Explorer';
+
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+
+
+const ZoomableSection = ({ children, options }) => {
+  return (
+    <TransformWrapper {...options}>
+      <TransformComponent>
+        {children}
+      </TransformComponent>
+    </TransformWrapper>
+  );
+};
 
 function App() {
   const [slide, setSlide] = useState(0);
 
-  const [zoomLevel, setZoomLevel] = useState(1); // 1 for normal, greater for zoom
-  const [scrollPosition, setScrollPosition] = useState(0); // Scroll position in vw
+  // const [zoomLevel, setZoomLevel] = useState(1); // Normal zoom level
+  // const [targetScrollPercentage, setTargetScrollPercentage] = useState(0); // Target scroll percentage
 
-  const handleZoom = (sectionPosition) => {
-    setZoomLevel(2); // Example zoom level, adjust as needed
-    setScrollPosition(sectionPosition);
-    // Additional logic to scroll to the specific position
+  // const handleZoom = (percentage) => {
+  //   setZoomLevel(2); // Example zoom level
+  //   setTargetScrollPercentage(percentage);
+  // };
+
+  // const handleResetZoom = () => {
+  //   setZoomLevel(1);
+  //   setTargetScrollPercentage(0);
+  // };
+
+  // useEffect(() => {
+  //   if (zoomLevel !== 1) {
+  //     const scrollHeight = document.documentElement.scrollHeight;
+  //     const targetScroll = (scrollHeight * targetScrollPercentage) / 100;
+  //     window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+  //   }
+  // }, [zoomLevel, targetScrollPercentage]);
+
+  const transformRef = useRef(null);
+  const refToYourBox = useRef(null);
+
+  const zoomToBox = (boxRef) => {
+    if (transformRef.current && boxRef.current) {
+      const { x, y, width, height } = boxRef.current.getBoundingClientRect();
+      const scale = Math.min(window.innerWidth / width, window.innerHeight / height);
+      const offsetX = -x * scale + (window.innerWidth - width * scale) / 2;
+      const offsetY = -y * scale + (window.innerHeight - height * scale) / 2;
+
+      transformRef.current.setTransform(offsetX, offsetY, scale);
+    }
   };
 
-  const handleResetZoom = () => {
-    setZoomLevel(1);
-    setScrollPosition(0);
-    // Logic to reset scroll position
+  const resetZoom = () => {
+    if (transformRef.current) {
+      transformRef.current.resetTransform();
+    }
   };
 
   return (
-    <div className='app-container' style={{transform: `scale(${zoomLevel})`}}>
-      <div className="svg-background-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/tree.svg)` }}>
-        <header className="header-bar">
-              <div className="button-group left">
-                  <button className="header-button">Flashcards</button>
-                  <button className="header-button">Home Explorer</button>
+    <ZoomableSection options={{ ref: transformRef }}>
+      <div className='app-container'> {/* style={{transform: `scale(${zoomLevel})`}} */}
+        <div className="svg-background-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/tree.svg)` }}>
+          <header className="header-bar">
+                <div className="button-group left">
+                    <button className="header-button">Flashcards</button>
+                    <button className="header-button">Home Explorer</button>
+                </div>
+                <div className="button-group right">
+                    <button className="header-button">Slideshow</button>
+                    <button className="header-button">Resources</button>
+                </div>
+            </header>
+            <div className="box" ref={refToYourBox} onClick={() => zoomToBox(refToYourBox)}>
+              <div className="rectangle top-left">
+                <Flashcard currentSlide={slide} setCurrentSlide={setSlide} />     
               </div>
-              <div className="button-group right">
-                  <button className="header-button">Slideshow</button>
-                  <button className="header-button">Resources</button>
+            </div>
+            <div className="zoom-container-middle-right">
+              <div className="rectangle middle-right">
+                <Explorer /> 
+                {/* <button onClick={() => handleZoom(39.5)}>Zoom into Section 1</button>*/}
+                {/* <button onClick={handleResetZoom}>Go Back</button> */}
               </div>
-          </header>
-          <div className="rectangle top-left">
-            <Flashcard currentSlide={slide} setCurrentSlide={setSlide}/>
-          </div>
-          <div className="rectangle middle-right">
-            <Explorer />
-          </div>
-          <div className="rectangle bottom-left">
-            {/* <Slideshow /> */}
-            <iframe 
-                  src={`${process.env.PUBLIC_URL}/Webmaster sketches 12-4-23.pdf`}
-                  title="PDF"
-                  className="pdf-viewer"
-            ></iframe>
-          </div>
-          <div className="content">
-              <h1></h1>
-          </div>
-          <button onClick={() => handleZoom(50)}>Zoom into Section 1</button> {/* Replace 50 with actual position */}
-          <button onClick={handleResetZoom}>Go Back</button>
+            </div>
+            <div className="zoom-container-bottom-left">
+              <div className="rectangle bottom-left">
+                {/* <Slideshow /> */}
+                <iframe 
+                      src={`${process.env.PUBLIC_URL}/Webmaster sketches 12-4-23.pdf`}
+                      title="PDF"
+                      className="pdf-viewer"
+                ></iframe>
+              </div>
+            </div>
+            <div className="content">
+                <h1></h1>
+            </div>
+        </div>
       </div>
-    </div>
+    </ZoomableSection>
   );
 }
 
