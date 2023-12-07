@@ -3,66 +3,14 @@ import './App.css';
 import Flashcard from './Slideshow';
 // import Slideshow from './Presentation';
 import Explorer from './Explorer';
-
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-
-
-const ZoomableSection = ({ children, options }) => {
-  return (
-    <TransformWrapper {...options}>
-      <TransformComponent>
-        {children}
-      </TransformComponent>
-    </TransformWrapper>
-  );
-};
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 function App() {
   const [slide, setSlide] = useState(0);
-
-  // const [zoomLevel, setZoomLevel] = useState(1); // Normal zoom level
-  // const [targetScrollPercentage, setTargetScrollPercentage] = useState(0); // Target scroll percentage
-
-  // const handleZoom = (percentage) => {
-  //   setZoomLevel(2); // Example zoom level
-  //   setTargetScrollPercentage(percentage);
-  // };
-
-  // const handleResetZoom = () => {
-  //   setZoomLevel(1);
-  //   setTargetScrollPercentage(0);
-  // };
-
-  // useEffect(() => {
-  //   if (zoomLevel !== 1) {
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     const targetScroll = (scrollHeight * targetScrollPercentage) / 100;
-  //     window.scrollTo({ top: targetScroll, behavior: 'smooth' });
-  //   }
-  // }, [zoomLevel, targetScrollPercentage]);
-
-  const transformRef = useRef(null);
-  const refToYourBox = useRef(null);
-
-  const zoomToBox = (boxRef) => {
-    if (transformRef.current && boxRef.current) {
-      const { x, y, width, height } = boxRef.current.getBoundingClientRect();
-      const scale = Math.min(window.innerWidth / width, window.innerHeight / height);
-      const offsetX = -x * scale + (window.innerWidth - width * scale) / 2;
-      const offsetY = -y * scale + (window.innerHeight - height * scale) / 2;
-
-      transformRef.current.setTransform(offsetX, offsetY, scale);
-    }
-  };
-
-  const resetZoom = () => {
-    if (transformRef.current) {
-      transformRef.current.resetTransform();
-    }
-  };
+  
 
   return (
-    <ZoomableSection options={{ ref: transformRef }}>
       <div className='app-container'> {/* style={{transform: `scale(${zoomLevel})`}} */}
         <div className="svg-background-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/tree.svg)` }}>
           <header className="header-bar">
@@ -75,11 +23,12 @@ function App() {
                     <button className="header-button">Resources</button>
                 </div>
             </header>
-            <div className="box" ref={refToYourBox} onClick={() => zoomToBox(refToYourBox)}>
+            
+            <Zoom>
               <div className="rectangle top-left">
                 <Flashcard currentSlide={slide} setCurrentSlide={setSlide} />     
               </div>
-            </div>
+            </Zoom>
             <div className="zoom-container-middle-right">
               <div className="rectangle middle-right">
                 <Explorer /> 
@@ -102,7 +51,6 @@ function App() {
             </div>
         </div>
       </div>
-    </ZoomableSection>
   );
 }
 

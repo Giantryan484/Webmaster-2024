@@ -9,6 +9,7 @@
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-medium-image-zoom": "^5.1.8",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
     "react-zoom-pan-pinch": "^3.3.0",
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-prismazoom": "^3.3.5"
   }
 }
