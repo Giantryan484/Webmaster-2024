@@ -10,18 +10,20 @@
   width: 100%;
   height: 100%;
   position: relative;
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   border-radius: 1vw;
   overflow: hidden;
 }
   
 .slide {
     position: absolute; /* Position slides absolutely within container */
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+    height: 14vw;
+    background-color: white;
+    overflow-wrap: break-word;
     /* border: 1px solid lightgrey; */
     border-radius: 1vw;
+    padding: 2vw;
+    font-size: 1vw;
   }
 
   .arrow-button {
@@ -81,67 +83,87 @@
 }
 
   .sliding-on {
+    background-color: white;
     z-index: 1;
     animation: slideOn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   .sliding-off {
+    background-color: white;
     z-index: 1;
     animation: slideOff 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   
-  .slide-heading {
-    margin: 0 0 10px;
-    color: #333;
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.slide h2 {
+  margin: 0 0 0.5vw;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-container, .text-container {
+  flex: 1;
+  padding: 10px;
+}
+
+.text-container {
+  font-size: 0.8vw;
+}
+
+.text-container p{
+  margin: 0;
+}
+
+.text-only-container {
+  padding: 10px;
+}
+
+.big-image .image-container {
+  position: relative;
+  text-align: center;
+}
+
+.big-image img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.hub-button {
+  padding: 10px;
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  .content, .hub-grid {
+	flex-direction: column;
+	grid-template-columns: 1fr;
   }
-  
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .image-container, .text-container {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .big-image .image-container {
-    position: relative;
-    text-align: center;
-  }
-  
-  .big-image img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-  }
-  
-  .hub-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
-  .hub-button {
-    padding: 10px;
-    font-size: 1em;
-  }
-  
-  @media (max-width: 600px) {
-    .content, .hub-grid {
-      flex-direction: column;
-      grid-template-columns: 1fr;
-    }
-  }
+}
   
