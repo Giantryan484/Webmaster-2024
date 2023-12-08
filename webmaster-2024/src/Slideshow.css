@@ -14,6 +14,14 @@
   border-radius: 1vw;
   overflow: hidden;
 }
+
+.image-container img {
+  height: 10vw;
+  width: 10vw;
+  object-fit: cover; 
+  object-position: center; 
+  overflow:hidden
+}
   
 .slide {
     position: absolute; /* Position slides absolutely within container */
@@ -149,15 +157,22 @@
   padding: 5px;
 }
 
-.hub-grid {
+
+.buttons-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vw;
+  height: 80%;
+}
+
+.hub-page {
+  width: 26vw;
 }
 
 .hub-button {
-  padding: 10px;
-  font-size: 1em;
+  font-size: 0.8vw;
+  width: 5.6vw;
+  padding: 0 0.2vw;
 }
 
 @media (max-width: 600px) {

@@ -24,42 +24,42 @@ const contentList = [
     buttons: ["Roofing", "Energy", "Insulation and Windows", "Heating and Cooling", "Water Conservation", "Landscaping", "Materials and Resources", "Global Impact"],
     format: "hub-page"
   },
-  // Roofing Series
+  // Roofing Series 4-6
   {
     header: "Solar Tiles",
     description: "Imagine your roof doing more than just sheltering you. Solar tiles not only protect your home but also harness the sun's power. They blend in beautifully with traditional roofing and are a great investment for the eco-conscious homeowner. Let's explore how they bring energy and elegance together.",
-    image: "path/to/solar-tiles.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/solar-roof.jpg`,
     format: "image-left"
   },
   {
     header: "Green Roofs",
     description: "Green roofs are not just gardens in the sky; they are powerhouses of sustainability. They improve air quality, provide natural insulation, and create a habitat for wildlife. Join us in exploring this beautiful blend of nature and architecture.",
-    image: "path/to/green-roofs.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/Green_Roof.jpg`,
     format: "image-right"
   },
   {
     header: "Cool Roofs",
     description: "Beat the heat with cool roofs! These innovative roofs reflect sunlight, keeping your home cooler and reducing energy bills. Dive into the world of cool roofs and discover how they can be a smart choice for your home and the environment.",
-    image: "path/to/cool-roofs.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/cool-roof.jpg`,
     format: "image-left"
   },
-  // Energy Series
+  // Energy Series 7-10
   {
     header: "Solar Panels",
     description: "Sunlight is free, so why not use it? Solar panels convert sunlight into electricity, providing a clean and cost-effective energy source. Let’s explore how installing solar panels can be a bright idea for your home and the planet.",
-    image: "path/to/solar-panels.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/solar-panels.jpg`,
     format: "image-right"
   },
   {
     header: "Wind Turbines",
     description: "Harvest the power of the wind! Residential wind turbines are a breath of fresh air in green energy solutions. Let's compare different models and see how they can contribute to a more sustainable home.",
-    image: "path/to/wind-turbines.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/windmill.jpg`,
     format: "image-left"
   },
   {
     header: "Geothermal Systems",
     description: "Tap into the Earth’s natural warmth with geothermal systems. These systems provide efficient heating and cooling, reducing our reliance on fossil fuels. Let's delve into how geothermal technology works and its benefits for your home.",
-    image: "path/to/geothermal-systems.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/geothermal.jpg`,
     format: "image-right"
   },
   {
@@ -67,72 +67,72 @@ const contentList = [
     description: "Going green can save you some green! Learn about tax rebates and incentives available for those who invest in renewable energy systems. We’ve got all the info you need to make your green initiatives more affordable.",
     format: "text-only"
   },
-  // Insulation and Windows Series
+  // Insulation and Windows Series 11-12
   {
     header: "Eco-Friendly Insulation",
     description: "Keep your home cozy and eco-friendly with sustainable insulation materials. Discover different types and how they help in reducing your carbon footprint while keeping your energy bills low.",
-    image: "path/to/eco-friendly-insulation.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/insulation.jpg`,
     format: "image-left"
   },
   {
     header: "Energy-Efficient Windows",
     description: "Windows can be more than just a view outside. Energy-efficient windows reduce energy loss, keeping your home warmer in winter and cooler in summer. Let’s look at how choosing the right windows can make a big difference.",
-    image: "path/to/energy-efficient-windows.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/energy-efficiency-window-illustration.jpg`,
     format: "image-right"
   },
-  // Heating and Cooling Series
+  // Heating and Cooling Series 13-14
   {
     header: "Energy-Efficient HVAC Systems",
     description: "Modern HVAC systems are not just about comfort; they’re about sustainability. Explore the latest in energy-efficient HVAC technology and find out how these systems can improve your home's comfort and reduce environmental impact.",
-    image: "path/to/hvac-systems.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/HVAC.jpg`,
     format: "image-left"
   },
   {
     header: "Smart Thermostats",
     description: "Control your home's climate smartly! Smart thermostats learn your habits and adjust heating and cooling for optimal comfort and efficiency. Discover how these intelligent devices can make a big difference in your energy consumption.",
-    image: "path/to/smart-thermostats.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/thermostat.jpg`,
     format: "image-right"
   },
-  // Water Conservation Series
+  // Water Conservation Series 15-16
   {
     header: "Rainwater Harvesting Systems",
     description: "Every drop counts! Rainwater harvesting systems capture rainwater for reuse, reducing your water bills and helping the environment. Let’s explore how these systems work and the benefits they bring to your home and garden.",
-    image: "path/to/rainwater-harvesting.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/rainwater.jpg`,
     format: "image-left"
   },
   {
     header: "Low-Flow Fixtures",
     description: "Save water with every flush, wash, and shower! Low-flow fixtures are a simple yet effective way to conserve water. Learn about their benefits and how easily they can be integrated into your home.",
-    image: "path/to/low-flow-fixtures.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/lowflow.jpg`,
     format: "image-right"
   },
-  // Landscaping Series
+  // Landscaping Series 17-18
   {
     header: "Sustainable Landscaping Practices",
     description: "Transform your garden into an eco-paradise! Sustainable landscaping is all about working with nature. Discover practices that conserve water, reduce waste, and create a haven for local wildlife.",
-    image: "path/to/sustainable-landscaping.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/landscaping.jpg`,
     format: "image-left"
   },
   {
     header: "Native Plants",
     description: "Go native with your garden! Native plants require less water and care, making them an excellent choice for eco-friendly landscaping. Let’s explore the beauty and benefits of incorporating native flora into your outdoor space.",
-    image: "path/to/native-plants.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/native-plants.jpg`,
     format: "image-right"
   },
-  // Materials and Resources Series
+  // Materials and Resources Series 19-20
   {
     header: "Recycled Materials",
     description: "Recycling isn't just for bins! Using recycled materials in construction reduces waste and conserves resources. Discover the types of recycled materials that can give your home an eco-friendly edge.",
-    image: "path/to/recycled-materials.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/recyclables.jpg`,
     format: "image-left"
   },
   {
     header: "Sustainably Sourced Materials",
     description: "Every material has a story. Choosing sustainably sourced materials means supporting eco-friendly practices and reducing environmental impact. Let’s find out how to make responsible choices in building materials.",
-    image: "path/to/sustainably-sourced-materials.jpg",
+    image: `${process.env.PUBLIC_URL}/flashcard-images/sustainable-materials.jpg`,
     format: "image-right"
   },
-  // Conclusion Cards
+  // Conclusion Cards 20-22
   {
     header: "Global Impact",
     description: "Our journey together shows that every small step leads to a big impact. Your choices and actions contribute to a healthier planet. Let’s keep inspiring each other and move towards a sustainable future!",
@@ -150,7 +150,21 @@ const contentList = [
   }
 ];
 
-function Flashcard({ data, animationClass }) {
+const nameToCards = {
+  "Roofing": [4,5,6],
+  "Energy": [7,8,9,10],
+  "Insulation and Windows": [11,12],
+  "Heating and Cooling": [13,14],
+  "Water Conservation": [15,16],
+  "Landscaping": [17,18],
+  "Materials and Resources": [19,20],
+  "Global Impact": [21,22,23]
+}
+
+// go through sequentially if queue empty (before hub card), then when hub button pressed set the queue. if on last index of the queue and going forward, go back to hub and clear queue
+
+
+function Flashcard({ data, animationClass, queueFunction }) {
   const { image, description, format } = data;
   const slideClass = `slide ${format} ${animationClass}`;
 
@@ -212,7 +226,7 @@ function Flashcard({ data, animationClass }) {
           <h2>{data.header}</h2>
           <div className="buttons-container">
             {data.buttons.map((button, index) => (
-              <button key={index} className="hub-button">{button}</button>
+              <button key={index} className="hub-button" onClick={() => queueFunction(button)}>{button}</button>
             ))}
           </div>
         </div>
@@ -224,6 +238,8 @@ function Flashcard({ data, animationClass }) {
 }
 
 function Slideshow({ currentSlide, setCurrentSlide }) {
+
+  const [queue, setQueue] = useState(null);
   const [slideDirection, setSlideDirection] = useState('forward');
   const [animating, setAnimating] = useState(false);
   const [animatedSlide, setAnimatedSlide] = useState(null);
@@ -240,7 +256,23 @@ function Slideshow({ currentSlide, setCurrentSlide }) {
   };
 
   async function goForward() {
-    if (currentSlide < contentList.length - 1) {
+    if (queue && currentSlide === queue[queue.length - 1]) {
+      setSlideDirection('forward');
+      setAnimatedSlide(currentSlide)
+      setAnimating(true);
+      setCurrentSlide(3);
+      setQueue(null);
+    } else if (queue && currentSlide === 3) {
+      setSlideDirection('forward');
+      setAnimatedSlide(currentSlide)
+      setAnimating(true);
+      setCurrentSlide(queue[0]);
+    } else if (queue) {
+      setSlideDirection('forward');
+      setAnimatedSlide(currentSlide)
+      setAnimating(true);
+      setCurrentSlide(currentSlide + 1);
+    } else {
       setSlideDirection('forward');
       setAnimatedSlide(currentSlide)
       setAnimating(true);
@@ -255,18 +287,28 @@ function Slideshow({ currentSlide, setCurrentSlide }) {
     }
   }, [animating]);
 
+  async function handleSetQueue( series ) {
+    setQueue(nameToCards[series]);
+  }
+
+  useEffect(() => {
+    if (queue) {
+      goForward();
+    }
+  }, [queue]);
+
   return (
     <div className='slideshow-page'>
       <div className="slideshow-container">
         {currentSlide > 0 && <button className="arrow-button go-back" onClick={() => {if (animating !== true) {goBack()}}}>←</button>}
         
-        <Flashcard data={contentList[currentSlide]} />
+        <Flashcard data={contentList[currentSlide]} queueFunction={(value) => handleSetQueue(value)}/>
         
         {animating && 
-          <Flashcard data={contentList[animatedSlide]} animationClass={slideDirection === 'forward' ? 'sliding-off' : 'sliding-on'}/>
+          <Flashcard data={contentList[animatedSlide]} animationClass={slideDirection === 'forward' ? 'sliding-off' : 'sliding-on'} queueFunction={(value) => handleSetQueue(value)}/>
         }
 
-        {currentSlide < contentList.length - 1 && <button className="arrow-button go-forward" onClick={() => {if (animating !== true) {goForward()}}}>→</button>}
+        {(currentSlide < contentList.length - 1 && currentSlide !== 3) && <button className="arrow-button go-forward" onClick={() => {if (animating !== true) {goForward()}}}>→</button>}
       </div>
     </div>
   );
