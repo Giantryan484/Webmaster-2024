@@ -50,12 +50,12 @@ function Slideshow({ currentSlide, setCurrentSlide }) {
   return (
     <div className='slideshow-page'>
       <div className="slideshow-container">
-        {currentSlide > 0 && <button className="arrow-button go-back" onClick={goBack}>←</button>}
+        {currentSlide > 0 && <button className="arrow-button go-back" onClick={() => {if (animating !== true) {goBack()}}}>←</button>}
         <div className='slide' style={slides[currentSlide]}></div>
         {animating && <div className={`slide ${slideDirection === 'forward' ? 'sliding-off' : 'sliding-on'}`}
              style={slides[animatedSlide]}></div>
         }
-        {currentSlide < slides.length - 1 && <button className="arrow-button go-forward" onClick={goForward}>→</button>}
+        {currentSlide < slides.length - 1 && <button className="arrow-button go-forward" onClick={() => {if (animating !== true) {goForward()}}}>→</button>}
       </div>
     </div>
   );
