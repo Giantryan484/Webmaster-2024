@@ -1,0 +1,11 @@
+.pdf-viewer-container {
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .pdf-viewer-container img {
+    width: 100%;
+    height: auto;
+    display: block; 
+  }
+  
