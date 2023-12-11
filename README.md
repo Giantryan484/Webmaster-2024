@@ -2,7 +2,7 @@
 
 This is the code behind our 2024 TSA Webmaster submission. 
 
-We have two team members: Ryan McCormick and Kari Ajan (I'm doing the web development, she's doing the content.)
+We have two team members: Ryan McCormick and Kari Ajan (I'm doing the web development, she's doing the content). Note that the average team size for this event is 6 people, so we're fighting an uphill battle.
 
 Unfortunately, we got 3rd place at the districts competition and (because this is such a competitive event) are therefore not allowed to compete at the state-level. So, this code represents an archive of what we have made thus far.
 
