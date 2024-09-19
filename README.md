@@ -1,6 +1,6 @@
 # Webmaster-2024
 
-This is the code behind our 2024 TSA Webmaster submission. 
+This is the code behind our 2024 Technology Student Association (TSA) Webmaster submission. 
 
 We have two team members: Ryan McCormick and Kari Ajan (I'm doing the web development, she's doing the content). Note that the average team size for this event is 6 people, so we're fighting an uphill battle.
 
@@ -8,6 +8,7 @@ Unfortunately, we got 3rd place at the districts competition and (because this i
 
 To any recruiters or coworkers who read this, know that this was made in about one week by a single beginner React programmer who had very little experience in frontend design. Additionally, every single functionality (even the zooming) was done entirely from scratch using raw CSS and React, so please disregard the comic-sans as I was too busy making the rest of the website work.
 
+**UPDATE: as of December 12, 2023, this project will be untouched. We built this draft of the website, and we ended up placing 2nd place at the Regional competition, but another team from our school came out on top because they cited their sources properly when we didn't have time to do so. So, we were disqualified from the State competition, despite citing sources not being listed as a requrement of any kind in the Regional competition documentation.**
 
 (for Kari:)
 See [Quick Start Guide](Quick%20Start.md) for info on how to get started and setup your coding environment
